@@ -22,10 +22,12 @@ class String extends React.Component
 			"7"
 		];
 
+		const root = 12 - (this.props.root % 12);
+
 		for(let i = 0; i < this.props.frets; i++)
 		{
 			let pitch		= (this.props.pitch + i);
-			let position	= (this.props.root + pitch) % 12;
+			let position	= (pitch + root) % 12;
 			let caption		= captions[position];
 
 			let button;

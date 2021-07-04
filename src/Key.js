@@ -8,7 +8,7 @@ class Key extends React.Component
 
 		return (
 			<fieldset className="key">
-				<input type="number" value={this.props.pitch} step="1" onChange={this.props.onChange}/>
+				<input type="number" value={this.props.pitch} step="7" onChange={this.props.onChange}/>
 			</fieldset>
 		);
 	}
