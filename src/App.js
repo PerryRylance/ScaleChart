@@ -83,14 +83,14 @@ class App extends React.Component
 			<div className="app">
 				<form>
 					<div className="abstract-controls">
+						<Key 
+							pitch={this.state.key}
+							onChange={event => this.onKeyChange(event)}
+							/>
 						<Scale 
 							semitones={this.state.semitones}
 							onChange={event => this.onScaleChange(event)}
 							onScalePresetChange={event => this.onScalePresetChange(event)}
-							/>
-						<Key 
-							pitch={this.state.key}
-							onChange={event => this.onKeyChange(event)}
 							/>
 					</div>
 					<div className="instrument-controls">
