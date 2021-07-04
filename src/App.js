@@ -20,7 +20,7 @@ class App extends React.Component
 	onKeyChange(event)
 	{
 		this.setState({
-			key: event.target.value
+			key: parseInt(event.target.value)
 		});
 	}
 
@@ -28,7 +28,7 @@ class App extends React.Component
 	{
 		const semitones = this.state.semitones;
 
-		semitones[ event.target.getAttribute("data-key") ] = event.target.checked;
+		semitones[ parseInt(event.target.getAttribute("data-key")) ] = event.target.checked;
 
 		this.setState({
 			semitones: semitones
@@ -39,7 +39,7 @@ class App extends React.Component
 	{
 		const tuning = this.state.tuning;
 
-		tuning[ event.target.getAttribute("data-index") ] = event.target.value;
+		tuning[ parseInt(event.target.getAttribute("data-index")) ] = parseInt(event.target.value);
 
 		this.setState({
 			tuning: tuning
@@ -48,8 +48,6 @@ class App extends React.Component
 
 	onTuningPresetChange(event)
 	{
-		console.log(event.target.value);
-
 		this.setState({
 			tuning: JSON.parse(event.target.value)
 		});

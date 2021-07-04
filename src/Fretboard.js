@@ -12,9 +12,8 @@ class Fretboard extends React.Component
 			numbers.push(i);
 
 		const strings = numbers.map((i) => 
-			<li>
+			<li key={i}>
 				<String 
-					key={i}
 					frets={this.props.frets} 
 					pitch={this.props.tuning[i]} 
 					root={this.props.root} 

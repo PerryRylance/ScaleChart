@@ -38,7 +38,12 @@ class String extends React.Component
 				);
 
 			lis.push((
-				<li className="fret" data-pitch={pitch} data-position={position}>
+				<li 
+					key={`fret_${i}`}
+					className="fret" 
+					data-pitch={pitch} 
+					data-position={position}
+					>
 					{button}
 				</li>
 			));
