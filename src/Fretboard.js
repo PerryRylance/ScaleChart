@@ -32,10 +32,14 @@ class Fretboard extends React.Component
 				<div>
 					<select onChange={this.props.onTuningPresetChange}>
 						<optgroup label="Guitar">
-							<option value="[64, 59, 55, 50, 45, 40]">E Standard</option>
+							<option value="[64, 59, 55, 50, 45, 40]">Guitar Standard</option>
 						</optgroup>
 						<optgroup label="Mandolin">
-							<option value="[76, 69, 62, 55]">G Standard</option>
+							<option value="[76, 69, 62, 55]">Mandolin Standard</option>
+						</optgroup>
+						<optgroup label="Dobro">
+						<option value="[64, 60, 57, 55, 52, 48]">Dobro C6</option>
+						<option value="[62, 59, 55, 50, 47, 43]">Dobro Open G</option>
 						</optgroup>
 					</select>
 				</div>

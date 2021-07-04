@@ -53,6 +53,13 @@ class App extends React.Component
 		});
 	}
 
+	onScalePresetChange(event)
+	{
+		this.setState({
+			semitones: JSON.parse(event.target.value)
+		});
+	}
+
 	render()
 	{
 		return (
@@ -62,6 +69,7 @@ class App extends React.Component
 						<Scale 
 							semitones={this.state.semitones}
 							onChange={event => this.onScaleChange(event)}
+							onScalePresetChange={event => this.onScalePresetChange(event)}
 							/>
 						<Key 
 							pitch={this.state.key}

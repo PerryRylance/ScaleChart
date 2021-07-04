@@ -40,6 +40,23 @@ class Scale extends React.Component
 				<ol className="semitones">
 					{lis}
 				</ol>
+				<select onChange={this.props.onScalePresetChange}>
+					<optgroup label="Diatonic">
+						<option value="[1,0,1,0,1,1,0,1,0,1,0,1]">Major</option>
+						<option value="[1,0,1,1,0,1,0,1,1,0,1,0]">Minor</option>
+					</optgroup>
+					<optgroup label="Pentatonic">
+						<option value="[1,0,1,0,1,0,0,1,0,1,0,0]">Major Pentatonic</option>
+						<option value="[1,0,0,1,0,1,0,1,0,0,1,0]">Minor Pentatonic</option>
+					</optgroup>
+					<optgroup label="Blues">
+						<option value="[1,0,1,1,1,0,0,1,0,1,0,0]">Major Blues</option>
+						<option value="[1,0,0,1,0,1,1,1,0,0,1,0]">Minor Blues</option>
+					</optgroup>
+					<optgroup label="Other">
+						<option value="[1,0,1,0,1,0,1,0,1,0,1,0]">Whole Tone</option>
+					</optgroup>
+				</select>
 			</fieldset>
 		);
 	}
