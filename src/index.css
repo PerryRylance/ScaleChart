@@ -142,6 +142,10 @@ label[data-letter-semitone]::after
 {
 	padding-left: 1ch;
 	font-weight: bold;
+}
+
+.fretboard label[data-letter-semitone]::after
+{
 	color: white;
 }
 

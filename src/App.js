@@ -1,4 +1,6 @@
 import React from 'react';
+import Base64 from "base-64";
+
 import Scale from './Scale';
 import Key from './Key';
 import Fretboard from './Fretboard';
@@ -15,6 +17,11 @@ class App extends React.Component
 			tuning:		[64, 59, 55, 50, 45, 40],
 			frets:		13
 		};
+
+		const params	= new URLSearchParams(window.location.search);
+
+		if(params.has("state"))
+			this.state	= JSON.parse( Base64.decode(params.get("state")) );
 	}
 
 	onKeyChange(event)
@@ -58,6 +65,16 @@ class App extends React.Component
 		this.setState({
 			semitones: JSON.parse(event.target.value)
 		});
+	}
+
+	componentDidUpdate()
+	{
+		const params	= new URLSearchParams(window.location.search);
+		const data		= Base64.encode(JSON.stringify(this.state));
+	
+		params.set("state", data);
+
+		window.history.replaceState(this.state, window.title, ["?" + params.toString()]);
 	}
 
 	render()
