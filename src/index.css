@@ -1,11 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body
+{
+	font-size: 10pt;
+	font-family: Roboto;
+	font-weight: 300;
+}
+
 ol
 {
 	list-style: none;
+	padding-left: 0;
 }
 
 input[type="number"]
 {
 	width: 6ch;
+}
+
+.abstract-controls,
+	.abstract-controls ol.semitones
+{
+	display: flex;
+}
+
+fieldset.scale,
+	.abstract-controls ol.semitones > li
+{
+	flex-grow: 1;
+    flex-basis: 0;
+}
+
+.fretboard
+{
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+.fretboard > .strings
+{
+	background: url("./wood.jpg");
 }
 
 .string
@@ -23,15 +57,16 @@ input[type="number"]
 .string > .frets > li
 {
 	width: 4rem;
-	border-right: 1px solid black;
+	border-right: 3px solid goldenrod;
 	text-align: center;
 	padding: .2rem 0;
 }
 
 .string > .frets > li:first-child
 {
-	border-right-style: double;
+	/* border-right-style: double; */
 	border-right-width: 5px;
+	border-right-color: cornsilk;
 }
 
 .string > .frets::before
@@ -44,12 +79,48 @@ input[type="number"]
 	left: 0;
 	width: 100%;
 
-	z-index: -1;
+	z-index: 1;
+}
+
+.string > .frets button
+{
+	position: relative;
+	z-index: 2;
 }
 
 .string > .frets li:not([data-position="0"]) button
 {
 	border-radius: 100%;
+}
+
+ol.strings > li:last-child .frets > li
+{
+	position: relative;
+}
+
+ol.strings > li:last-child .frets > li:nth-child(12n + 1)::after,
+	ol.strings > li:last-child .frets > li:nth-child(12n + 4)::after,
+	ol.strings > li:last-child .frets > li:nth-child(12n + 6)::after,
+	ol.strings > li:last-child .frets > li:nth-child(12n + 8)::after,
+	ol.strings > li:last-child .frets > li:nth-child(12n + 10)::after
+{
+	content: "\2022";
+
+	position: absolute;
+	left: 50%;
+	bottom: -1em;
+	transform: translateX(-50%);
+	font-size: 3em;
+}
+
+ol.strings > li:last-child .frets > li:nth-child(12n + 1)::after
+{
+	content: "\2022 \2022";
+}
+
+ol.strings > li:last-child .frets > li:first-child::after
+{
+	content: none !important;
 }
 
 label[data-letter-semitone]
@@ -61,6 +132,8 @@ label[data-letter-semitone]
 label[data-letter-semitone]::after
 {
 	padding-left: 1ch;
+	font-weight: bold;
+	color: white;
 }
 
 label[data-letter-semitone="0"]::after

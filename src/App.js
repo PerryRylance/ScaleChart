@@ -15,9 +15,13 @@ class App extends React.Component
 		return (
 			<div className="app">
 				<form>
-					<Scale semitones={semitones}/>
-					<Key pitch={key}/>
-					<Fretboard tuning={tuning} root={key} semitones={semitones} frets={frets}/>
+					<div className="abstract-controls">
+						<Scale semitones={semitones}/>
+						<Key pitch={key}/>
+					</div>
+					<div className="instrument-controls">
+						<Fretboard tuning={tuning} root={key} semitones={semitones} frets={frets}/>
+					</div>
 				</form>
 			</div>
 		);

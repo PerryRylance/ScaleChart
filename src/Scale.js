@@ -13,7 +13,7 @@ class Scale extends React.Component
 			(<span>Minor 3<sup>rd</sup></span>),
 			(<span>Major 3<sup>rd</sup></span>),
 			(<span>Perfect 4<sup>th</sup></span>),
-			(<span>Augmented 4<sup>th</sup> / Diminished 5<sup>th</sup></span>),
+			(<span>Tritone</span>),
 			(<span>Perfect 5<sup>th</sup></span>),
 			(<span>Minor 6<sup>th</sup></span>),
 			(<span>Major 6<sup>th</sup></span>),
