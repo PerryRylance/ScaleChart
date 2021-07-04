@@ -46,6 +46,15 @@ class App extends React.Component
 		});
 	}
 
+	onTuningPresetChange(event)
+	{
+		console.log(event.target.value);
+
+		this.setState({
+			tuning: JSON.parse(event.target.value)
+		});
+	}
+
 	render()
 	{
 		return (
@@ -68,6 +77,7 @@ class App extends React.Component
 							semitones={this.state.semitones} 
 							frets={this.state.frets}
 							onTuningChange={event => this.onTuningChange(event)}
+							onTuningPresetChange={event => this.onTuningPresetChange(event)}
 							/>
 					</div>
 				</form>
