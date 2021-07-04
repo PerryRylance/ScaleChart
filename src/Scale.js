@@ -21,19 +21,19 @@ class Scale extends React.Component
 			(<span>Major 7<sup>th</sup></span>)
 		];
 
-		const lis = [];
-
-		for(let i = 0; i < 12; i++)
-		{
-			lis.push(
-				<li>
-					<label>
-						<input type="checkbox" checked={semitones[i]}/>
-						{labels[i]}
-					</label>
-				</li>
-			)
-		}
+		const lis = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => 
+			<li key={i}>
+				<label>
+					<input 
+						type="checkbox" 
+						checked={semitones[i]} 
+						onChange={event => this.props.onChange(event)}
+						data-key={i}
+						/>
+					{labels[i]}
+				</label>
+			</li>
+		);
 
 		return (
 			<fieldset className="scale">

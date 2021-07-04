@@ -9,16 +9,16 @@ class String extends React.Component
 		// TODO: Support maj/min, b/#, letters, degrees
 		const captions	= [
 			"1",
-			"&#x266D;2",
+			"♭2",
 			"2",
-			"&#x266D;3",
+			"♭3",
 			"3",
 			"4",
-			"&#x266D;5",
+			"♭5",
 			"5",
-			"&#x266D;6",
+			"♭6",
 			"6",
-			"&#x266D;7",
+			"♭7",
 			"7"
 		];
 
@@ -47,7 +47,12 @@ class String extends React.Component
 		return (
 			<div className="string">
 				<label data-letter-semitone={this.props.pitch % 12}>
-					<input type="number" value={this.props.pitch}/>
+					<input 
+						type="number" 
+						value={this.props.pitch}
+						data-index={this.props.index}
+						onChange={this.props.onTuningChange}
+						/>
 				</label>
 
 				<ol className="frets">

@@ -5,16 +5,25 @@ class Fretboard extends React.Component
 {
 	render()
 	{
-		const strings = [];
-		
 		let i = 0;
+		const numbers = [];
 
 		for(i = 0; i < this.props.tuning.length; i++)
-			strings.push((
-				<li>
-					<String frets={this.props.frets} pitch={this.props.tuning[i]} root={this.props.root} semitones={this.props.semitones}/>
-				</li>
-			));
+			numbers.push(i);
+
+		const strings = numbers.map((i) => 
+			<li>
+				<String 
+					key={i}
+					frets={this.props.frets} 
+					pitch={this.props.tuning[i]} 
+					root={this.props.root} 
+					semitones={this.props.semitones}
+					index={i}
+					onTuningChange={this.props.onTuningChange}
+					/>
+			</li>
+		);
 
 		return (
 			<fieldset className="fretboard">
