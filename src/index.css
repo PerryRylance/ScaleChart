@@ -31,6 +31,158 @@ fieldset.scale,
     flex-basis: 0;
 }
 
+fieldset.key
+{
+	position: relative;
+
+	width: 10rem;
+	height: 10rem;
+}
+
+fieldset.key input
+{
+	display: none;
+}
+
+fieldset.key label
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+fieldset.key label > span
+{
+	display: block;
+	cursor: pointer;
+}
+
+fieldset.key label > input:checked + span
+{
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+fieldset.key label:nth-child(1)
+{
+	transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+fieldset.key label:nth-child(1) > span
+{
+	transform: translateX(4rem) rotate(90deg);
+}
+
+fieldset.key label:nth-child(2)
+{
+	transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+fieldset.key label:nth-child(2) > span
+{
+	transform: translateX(4rem) rotate(60deg);
+}
+
+fieldset.key label:nth-child(3)
+{
+	transform: translate(-50%, -50%) rotate(-30deg);
+}
+
+fieldset.key label:nth-child(3) > span
+{
+	transform: translateX(4rem) rotate(30deg);
+}
+
+fieldset.key label:nth-child(4)
+{
+	transform: translate(-50%, -50%) rotate(-0deg);
+}
+
+fieldset.key label:nth-child(4) > span
+{
+	transform: translateX(4rem) rotate(0deg);
+}
+
+fieldset.key label:nth-child(5)
+{
+	transform: translate(-50%, -50%) rotate(30deg);
+}
+
+fieldset.key label:nth-child(5) > span
+{
+	transform: translateX(4rem) rotate(-30deg);
+}
+
+fieldset.key label:nth-child(6)
+{
+	transform: translate(-50%, -50%) rotate(60deg);
+}
+
+fieldset.key label:nth-child(6) > span
+{
+	transform: translateX(4rem) rotate(-60deg);
+}
+
+fieldset.key label:nth-child(7)
+{
+	transform: translate(-50%, -50%) rotate(90deg);
+}
+
+fieldset.key label:nth-child(7) > span
+{
+	transform: translateX(4rem) rotate(-90deg);
+}
+
+fieldset.key label:nth-child(8)
+{
+	transform: translate(-50%, -50%) rotate(120deg);
+}
+
+fieldset.key label:nth-child(8) > span
+{
+	transform: translateX(4rem) rotate(-120deg);
+}
+
+fieldset.key label:nth-child(9)
+{
+	transform: translate(-50%, -50%) rotate(150deg);
+}
+
+fieldset.key label:nth-child(9) > span
+{
+	transform: translateX(4rem) rotate(-150deg);
+}
+
+fieldset.key label:nth-child(10)
+{
+	transform: translate(-50%, -50%) rotate(180deg);
+}
+
+fieldset.key label:nth-child(10) > span
+{
+	transform: translateX(4rem) rotate(-180deg);
+}
+
+fieldset.key label:nth-child(11)
+{
+	transform: translate(-50%, -50%) rotate(210deg);
+}
+
+fieldset.key label:nth-child(11) > span
+{
+	transform: translateX(4rem) rotate(-210deg);
+}
+
+fieldset.key label:nth-child(12)
+{
+	transform: translate(-50%, -50%) rotate(240deg);
+}
+
+fieldset.key label:nth-child(12) > span
+{
+	transform: translateX(4rem) rotate(-240deg);
+}
+
 .fretboard
 {
 	overflow-x: scroll;

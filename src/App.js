@@ -13,7 +13,7 @@ class App extends React.Component
 
 		this.state = {
 			semitones:	[true, false, true, false, true, true, false, true, false, true, false, true],
-			key:		60,
+			key:		0,
 			tuning:		[64, 59, 55, 50, 45, 40],
 			frets:		13
 		};
