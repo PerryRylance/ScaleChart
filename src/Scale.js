@@ -44,6 +44,11 @@ class Scale extends React.Component
 					<optgroup label="Diatonic">
 						<option value="[1,0,1,0,1,1,0,1,0,1,0,1]">Major</option>
 						<option value="[1,0,1,1,0,1,0,1,1,0,1,0]">Minor</option>
+						<option value="[1,1,0,1,0,1,1,0,1,0,1,0]">Locrian</option>
+						<option value="[1,0,1,1,0,1,0,1,0,1,1,0]">Dorian</option>
+						<option value="[1,1,0,1,0,1,0,1,1,0,1,0]">Phrygian</option>
+						<option value="[1,0,1,0,1,0,1,1,0,1,0,1]">Lydian</option>
+						<option value="[1,0,1,0,1,1,0,1,0,1,1,0]">Mixolydian</option>
 					</optgroup>
 					<optgroup label="Pentatonic">
 						<option value="[1,0,1,0,1,0,0,1,0,1,0,0]">Major Pentatonic</option>
@@ -55,6 +60,8 @@ class Scale extends React.Component
 					</optgroup>
 					<optgroup label="Other">
 						<option value="[1,0,1,0,1,0,1,0,1,0,1,0]">Whole Tone</option>
+						<option value="[1,1,0,1,1,0,1,1,0,1,1,0]">Octatonic (H-W)</option>
+						<option value="[1,0,1,1,0,1,1,0,1,1,0,1]">Octatonic (W-H)</option>
 					</optgroup>
 				</select>
 			</fieldset>
