@@ -41,6 +41,7 @@ class Scale extends React.Component
 					{lis}
 				</ol>
 				<select onChange={this.props.onScalePresetChange}>
+					<option value="[0,0,0,0,0,0,0,0,0,0,0,0]">Blank</option>
 					<optgroup label="Diatonic">
 						<option value="[1,0,1,0,1,1,0,1,0,1,0,1]">Major</option>
 						<option value="[1,0,1,1,0,1,0,1,1,0,1,0]">Minor</option>
