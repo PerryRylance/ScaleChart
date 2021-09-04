@@ -204,6 +204,7 @@ fieldset.key label:nth-child(12) > span
 {
 	display: flex;
 	position: relative;
+	align-self: stretch;
 }
 
 .string > .frets > li
@@ -212,6 +213,7 @@ fieldset.key label:nth-child(12) > span
 	border-right: 3px solid goldenrod;
 	text-align: center;
 	padding: .2rem 0;
+	min-height: 1.875rem;
 }
 
 .string > .frets > li:first-child
@@ -359,4 +361,30 @@ label[data-letter-semitone="10"]::after
 label[data-letter-semitone="11"]::after
 {
 	content: "B";
+}
+
+@media print
+{
+	.abstract-controls,
+		input, select
+	{
+		display: none;
+	}
+
+	.string > .frets > li:first-child
+	{
+		border-right-color: black;
+		border-right-style: double;
+	}
+
+	fieldset.fretboard
+	{
+		border: none;
+		overflow-x: hidden;
+	}
+
+	.string > .frets li[data-position="0"] button
+	{
+		filter: none;
+	}
 }
