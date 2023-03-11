@@ -239,7 +239,7 @@ fieldset.key label:nth-child(12) > span
 .string > .frets button
 {
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 
 	width: 4ch;
 	height: 4ch;
@@ -252,6 +252,39 @@ fieldset.key label:nth-child(12) > span
 }
 
 .string > .frets li:not([data-position="0"]) button
+{
+	border-radius: 100%;
+}
+
+.string > .frets li
+{
+	position: relative;
+}
+
+.string > .frets li .cursor
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 4ch;
+	height: 4ch;
+
+	z-index: 2;
+
+	content: "";
+
+	box-shadow: 
+		0px 0px .2rem blue,
+		0px 0px .2rem blue,
+		0px 0px .2rem blue,
+		0px 0px .2rem blue,
+		0px 0px .2rem blue;
+	background: blue;
+}
+
+.string > .frets li:not([data-position="0"]) .cursor
 {
 	border-radius: 100%;
 }
