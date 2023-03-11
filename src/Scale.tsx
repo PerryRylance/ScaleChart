@@ -129,9 +129,6 @@ function Scale({semitones, onChange, onScalePresetChange}: IScaleProps)
 
 	return (
 		<fieldset className="scale">
-			<ol className="semitones">
-				{lis}
-			</ol>
 			<select onChange={onScalePresetChange}>
 				{categories.map((category, index) => (
 					<optgroup label={category} key={index}>
@@ -145,6 +142,9 @@ function Scale({semitones, onChange, onScalePresetChange}: IScaleProps)
 					</optgroup>
 				))}
 			</select>
+			<ol className="semitones">
+				{lis}
+			</ol>
 		</fieldset>
 	);
 }

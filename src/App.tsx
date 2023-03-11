@@ -15,11 +15,12 @@ function App()
 	});
 
 	const onChartStateChange = () => {
-
+		// TODO: Reimplement URL state
 	};
 
 	return <div className="app">
 		<AppContext.Provider value={{state, setState}}>
+			<Chart onStateChanged={onChartStateChange} />
 			<Chart onStateChanged={onChartStateChange} />
 		</AppContext.Provider>
 	</div>;

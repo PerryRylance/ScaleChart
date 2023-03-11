@@ -7,6 +7,12 @@ body
 	font-weight: 300;
 }
 
+form.chart
+{
+	display: flex;
+	align-items: center;
+}
+
 ol
 {
 	list-style: none;
@@ -18,17 +24,20 @@ input[type="number"]
 	width: 6ch;
 }
 
-.abstract-controls,
-	.abstract-controls ol.semitones
+.abstract-controls
 {
 	display: flex;
 }
 
-fieldset.scale,
-	.abstract-controls ol.semitones > li
+.abstract-controls ol.semitones > li
 {
 	flex-grow: 1;
     flex-basis: 0;
+}
+
+ol.semitones
+{
+	columns: 2;
 }
 
 fieldset.key
@@ -419,5 +428,10 @@ label[data-letter-semitone="11"]::after
 	.string > .frets li[data-position="0"] button
 	{
 		filter: none;
+	}
+
+	.string > .frets li .cursor
+	{
+		display: none;
 	}
 }

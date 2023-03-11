@@ -78,7 +78,7 @@ function Chart({onStateChanged}: IChartProps)
 		});
 	}
 
-	return <form>
+	return <form className="chart">
 		<div className="abstract-controls">
 			<Key 
 				pitch={state.key}
