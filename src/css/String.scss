@@ -84,7 +84,8 @@
 			0px 0px .2rem blue,
 			0px 0px .2rem blue,
 			0px 0px .2rem blue;
-		background: blue;
+
+		// background: blue;
 	}
 
 	& > .frets li:not([data-position="0"]) .cursor
@@ -105,62 +106,62 @@
 
 		&[data-letter-semitone="0"]::after
 		{
-			content: "C";
+			content: "C" attr(data-octave);
 		}
 
 		&[data-letter-semitone="1"]::after
 		{
-			content: "D♭";
+			content: "D♭" attr(data-octave);
 		}
 
 		&[data-letter-semitone="2"]::after
 		{
-			content: "D";
+			content: "D" attr(data-octave);
 		}
 
 		&[data-letter-semitone="3"]::after
 		{
-			content: "E♭";
+			content: "E♭" attr(data-octave);
 		}
 
 		&[data-letter-semitone="4"]::after
 		{
-			content: "E";
+			content: "E" attr(data-octave);
 		}
 
 		&[data-letter-semitone="5"]::after
 		{
-			content: "F";
+			content: "F" attr(data-octave);
 		}
 
 		&[data-letter-semitone="6"]::after
 		{
-			content: "G♭";
+			content: "G♭" attr(data-octave);
 		}
 
 		&[data-letter-semitone="7"]::after
 		{
-			content: "G";
+			content: "G" attr(data-octave);
 		}
 
 		&[data-letter-semitone="8"]::after
 		{
-			content: "A♭";
+			content: "A♭" attr(data-octave);
 		}
 
 		&[data-letter-semitone="9"]::after
 		{
-			content: "A";
+			content: "A" attr(data-octave);
 		}
 
 		&[data-letter-semitone="10"]::after
 		{
-			content: "B♭";
+			content: "B♭" attr(data-octave);
 		}
 
 		&[data-letter-semitone="11"]::after
 		{
-			content: "B";
+			content: "B" attr(data-octave);
 		}
 	}
 }

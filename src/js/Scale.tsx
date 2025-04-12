@@ -1,5 +1,7 @@
 import { ChangeEventHandler } from "react";
 
+import "../css/Scale.scss";
+
 export type Semitones = [boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean, boolean];
 
 export interface IScale

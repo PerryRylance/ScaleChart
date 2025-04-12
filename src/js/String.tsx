@@ -34,6 +34,7 @@ function String({frets, tuning, root, index, semitones, onTuningChange}: IString
 {
 	const context	= useAppContext();
 	const lis		= [];
+	const octave	= Math.floor(tuning / 12) - 1;
 
 	const onMouseOverLocation = (event: MouseEvent<HTMLLIElement>) => {
 
@@ -83,13 +84,13 @@ function String({frets, tuning, root, index, semitones, onTuningChange}: IString
 
 	return (
 		<div className="string">
-			<label data-letter-semitone={tuning % 12}>
+			<label data-letter-semitone={tuning % 12} data-octave={octave}>
 				<input 
 					type="number" 
 					value={tuning.toString()}
 					data-index={index}
 					onChange={onTuningChange}
-					/>
+				/>
 			</label>
 
 			<ol className="frets">
