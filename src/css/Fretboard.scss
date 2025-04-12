@@ -1,0 +1,48 @@
+.scale-chart.app
+{
+	fieldset.fretboard
+	{
+		overflow-x: scroll;
+		overflow-y: hidden;
+
+		ol.strings
+		{
+			background: url("../assets/wood.jpg");
+		}
+
+		ol.strings > li:last-child .frets > li
+		{
+			position: relative;
+		}
+
+		ol.strings > li:last-child .frets > li:nth-child(12n + 1)::after,
+			ol.strings > li:last-child .frets > li:nth-child(12n + 4)::after,
+			ol.strings > li:last-child .frets > li:nth-child(12n + 6)::after,
+			ol.strings > li:last-child .frets > li:nth-child(12n + 8)::after,
+			ol.strings > li:last-child .frets > li:nth-child(12n + 10)::after
+		{
+			content: "\2022";
+
+			position: absolute;
+			left: 50%;
+			bottom: -1em;
+			transform: translateX(-50%);
+			font-size: 3em;
+		}
+
+		ol.strings > li:last-child .frets > li:nth-child(12n + 1)::after
+		{
+			content: "\2022 \2022";
+		}
+
+		ol.strings > li:last-child .frets > li:first-child::after
+		{
+			content: none !important;
+		}
+
+		label[data-letter-semitone]::after
+		{
+			color: white;
+		}
+	}
+}

@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from "react";
 
 import Scale from './Scale';
-import Key from './Key';
+import CircleOfFifths from './CircleOfFifths';
 import Fretboard from './Fretboard';
 
 import { Semitones, library as Scales, IScale } from "./Scale";
@@ -80,10 +80,10 @@ function Chart({onStateChanged}: IChartProps)
 
 	return <form className="chart">
 		<div className="abstract-controls">
-			<Key 
+			<CircleOfFifths 
 				pitch={state.key}
 				onChange={event => onKeyChange(event)}
-				/>
+			/>
 			<Scale 
 				semitones={state.semitones}
 				onChange={event => onScaleChange(event)}

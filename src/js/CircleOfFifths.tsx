@@ -1,15 +1,19 @@
 import { ChangeEventHandler } from "react";
 
-interface IKeyProps
+import "../css/CircleOfFifths.scss";
+
+interface ICircleOfFifthsProps
 {
 	pitch: number;
-	onChange: ChangeEventHandler<HTMLInputElement>;
+	onChange?: ChangeEventHandler<HTMLInputElement>;
 }
 
-function Key({pitch, onChange}: IKeyProps)
+export default function CircleOfFifths({pitch, onChange}: ICircleOfFifthsProps)
 {
+	pitch %= 12;
+
 	return (
-		<fieldset className="key">
+		<fieldset className="circle-of-fifths key">
 			<label>
 				<input name="key" type="radio" value="0" checked={pitch === 0} onChange={onChange}/>
 				<span>C</span>
@@ -61,5 +65,3 @@ function Key({pitch, onChange}: IKeyProps)
 		</fieldset>
 	);
 }
-
-export default Key;

@@ -1,0 +1,151 @@
+fieldset.circle-of-fifths
+{
+	position: relative;
+
+	width: 10rem;
+	height: 10rem;
+
+	input
+	{
+		display: none;
+	}
+
+	label
+	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		& > span
+		{
+			display: block;
+			cursor: pointer;
+		}
+
+		& > input:checked + span
+		{
+			text-decoration: underline;
+			font-weight: bold;
+		}
+	}
+
+	& > label:nth-child(1)
+	{
+		transform: translate(-50%, -50%) rotate(-90deg);
+	}
+
+	& > label:nth-child(1) > span
+	{
+		transform: translateX(4rem) rotate(90deg);
+	}
+
+	& > label:nth-child(2)
+	{
+		transform: translate(-50%, -50%) rotate(-60deg);
+	}
+
+	& > label:nth-child(2) > span
+	{
+		transform: translateX(4rem) rotate(60deg);
+	}
+
+	& > label:nth-child(3)
+	{
+		transform: translate(-50%, -50%) rotate(-30deg);
+	}
+
+	& > label:nth-child(3) > span
+	{
+		transform: translateX(4rem) rotate(30deg);
+	}
+
+	& > label:nth-child(4)
+	{
+		transform: translate(-50%, -50%) rotate(-0deg);
+	}
+
+	& > label:nth-child(4) > span
+	{
+		transform: translateX(4rem) rotate(0deg);
+	}
+
+	& > label:nth-child(5)
+	{
+		transform: translate(-50%, -50%) rotate(30deg);
+	}
+
+	& > label:nth-child(5) > span
+	{
+		transform: translateX(4rem) rotate(-30deg);
+	}
+
+	& > label:nth-child(6)
+	{
+		transform: translate(-50%, -50%) rotate(60deg);
+	}
+
+	& > label:nth-child(6) > span
+	{
+		transform: translateX(4rem) rotate(-60deg);
+	}
+
+	& > label:nth-child(7)
+	{
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
+
+	& > label:nth-child(7) > span
+	{
+		transform: translateX(4rem) rotate(-90deg);
+	}
+
+	& > label:nth-child(8)
+	{
+		transform: translate(-50%, -50%) rotate(120deg);
+	}
+
+	& > label:nth-child(8) > span
+	{
+		transform: translateX(4rem) rotate(-120deg);
+	}
+
+	& > label:nth-child(9)
+	{
+		transform: translate(-50%, -50%) rotate(150deg);
+	}
+
+	& > label:nth-child(9) > span
+	{
+		transform: translateX(4rem) rotate(-150deg);
+	}
+
+	& > label:nth-child(10)
+	{
+		transform: translate(-50%, -50%) rotate(180deg);
+	}
+
+	& > label:nth-child(10) > span
+	{
+		transform: translateX(4rem) rotate(-180deg);
+	}
+
+	& > label:nth-child(11)
+	{
+		transform: translate(-50%, -50%) rotate(210deg);
+	}
+
+	& > label:nth-child(11) > span
+	{
+		transform: translateX(4rem) rotate(-210deg);
+	}
+
+	& > label:nth-child(12)
+	{
+		transform: translate(-50%, -50%) rotate(240deg);
+	}
+
+	& > label:nth-child(12) > span
+	{
+		transform: translateX(4rem) rotate(-240deg);
+	}
+}

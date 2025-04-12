@@ -1,0 +1,166 @@
+.scale-chart.app .fretboard ol.strings .string
+{
+	display: flex;
+	align-items: center;
+
+	& > .frets
+	{
+		display: flex;
+		position: relative;
+		align-self: stretch;
+	}
+
+	& > .frets > li
+	{
+		width: 4rem;
+		border-right: 3px solid goldenrod;
+		text-align: center;
+		padding: .2rem 0;
+		min-height: 1.875rem;
+	}
+
+	& > .frets > li:first-child
+	{
+		/* border-right-style: double; */
+		border-right-width: 5px;
+		border-right-color: cornsilk;
+	}
+
+	& > .frets::before
+	{
+		content: "";
+		border-top: 1px dotted black;
+
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+
+		z-index: 1;
+	}
+
+	& > .frets button
+	{
+		position: relative;
+		z-index: 3;
+
+		width: 4ch;
+		height: 4ch;
+	}
+
+	& > .frets li[data-position="0"] button
+	{
+		font-weight: bold;
+		filter: invert(1);
+	}
+
+	& > .frets li:not([data-position="0"]) button
+	{
+		border-radius: 100%;
+	}
+
+	& > .frets li
+	{
+		position: relative;
+	}
+
+	& > .frets li .cursor
+	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		width: 4ch;
+		height: 4ch;
+
+		z-index: 2;
+
+		content: "";
+
+		box-shadow: 
+			0px 0px .2rem blue,
+			0px 0px .2rem blue,
+			0px 0px .2rem blue,
+			0px 0px .2rem blue,
+			0px 0px .2rem blue;
+		background: blue;
+	}
+
+	& > .frets li:not([data-position="0"]) .cursor
+	{
+		border-radius: 100%;
+	}
+
+	label[data-letter-semitone]
+	{
+		display: flex;
+		width: 6rem;
+
+		&::after
+		{
+			padding-left: 1ch;
+			font-weight: bold;
+		}
+
+		&[data-letter-semitone="0"]::after
+		{
+			content: "C";
+		}
+
+		&[data-letter-semitone="1"]::after
+		{
+			content: "D♭";
+		}
+
+		&[data-letter-semitone="2"]::after
+		{
+			content: "D";
+		}
+
+		&[data-letter-semitone="3"]::after
+		{
+			content: "E♭";
+		}
+
+		&[data-letter-semitone="4"]::after
+		{
+			content: "E";
+		}
+
+		&[data-letter-semitone="5"]::after
+		{
+			content: "F";
+		}
+
+		&[data-letter-semitone="6"]::after
+		{
+			content: "G♭";
+		}
+
+		&[data-letter-semitone="7"]::after
+		{
+			content: "G";
+		}
+
+		&[data-letter-semitone="8"]::after
+		{
+			content: "A♭";
+		}
+
+		&[data-letter-semitone="9"]::after
+		{
+			content: "A";
+		}
+
+		&[data-letter-semitone="10"]::after
+		{
+			content: "B♭";
+		}
+
+		&[data-letter-semitone="11"]::after
+		{
+			content: "B";
+		}
+	}
+}

@@ -4,6 +4,8 @@ import String from "./String";
 
 import { library } from './Tuning';
 
+import "../css/Fretboard.scss";
+
 interface IFretboardProps
 {
 	tuning: number[];

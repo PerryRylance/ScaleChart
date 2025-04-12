@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body
+{
+	font-size: 10pt;
+	font-family: Roboto;
+	font-weight: 300;
+}
+
+.scale-chart.app
+{
+	form.chart
+	{
+		display: flex;
+		align-items: center;
+	}
+
+	ol
+	{
+		list-style: none;
+		padding-left: 0;
+	}
+
+	input[type="number"]
+	{
+		width: 6ch;
+	}
+
+	.abstract-controls
+	{
+		display: flex;
+	}
+
+	.abstract-controls ol.semitones > li
+	{
+		flex-grow: 1;
+		flex-basis: 0;
+	}
+
+	@media print
+	{
+		.abstract-controls,
+			input, select
+		{
+			display: none;
+		}
+
+		.string > .frets > li:first-child
+		{
+			border-right-color: black;
+			border-right-style: double;
+		}
+
+		fieldset.fretboard
+		{
+			border: none;
+			overflow-x: hidden;
+		}
+
+		.string > .frets li[data-position="0"] button
+		{
+			filter: none;
+		}
+
+		.string > .frets li .cursor
+		{
+			display: none;
+		}
+	}
+}

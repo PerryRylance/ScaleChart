@@ -3,6 +3,8 @@ import { useAppContext } from "./AppContext";
 
 import { Semitones } from "./Scale";
 
+import "../css/String.scss";
+
 interface IStringProps {
 	frets: number;
 	tuning: number;
